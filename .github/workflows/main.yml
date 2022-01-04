@@ -5,7 +5,7 @@ on:
   push:
     branches:
       - '*'
-      - '!master'
+      - '!main'
       - '!dev'
   pull_request:
     types: [ closed ]
@@ -15,7 +15,7 @@ jobs:
   build:
     name: Build
     #Run on Ubuntu using the latest version
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
     steps:
       #Check-out your repository under $GITHUB_WORKSPACE, so your workflow can access it
       - uses: actions/checkout@v1
@@ -50,7 +50,7 @@ jobs:
     needs: build
     name: Deploy To Dev
     #Run on Ubuntu using the latest version
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
     if: github.ref == 'dev' && github.event.action == 'closed' && github.event.pull_request.merged == true
     steps:
       - name: Download JAR
@@ -76,7 +76,7 @@ jobs:
     name: Deploy To Production
     #Run on Ubuntu using the latest version
     runs-on: ubuntu-latest
-    if: github.ref == 'master' && github.event.action == 'closed' && github.event.pull_request.merged == true
+    if: github.ref == 'main' && github.event.action == 'closed' && github.event.pull_request.merged == true
     steps:
       - name: Download JAR
         #Download the artifact which was uploaded in the build's job

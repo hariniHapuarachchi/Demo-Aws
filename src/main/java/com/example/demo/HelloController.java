@@ -36,4 +36,48 @@ public class HelloController {
                 "</body>\n" +
                 "</html>";
     }
+
+    @GetMapping("/home")
+    public String loadHomePage() {
+        return "<!DOCTYPE html>\n" +
+                "<html lang=\"en\">\n" +
+                "<head>\n" +
+                "    <meta charset=\"UTF-8\">\n" +
+                "    <link href=\"https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css\" rel=\"stylesheet\" integrity=\"sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3\" crossorigin=\"anonymous\">\n" +
+                "    <title>Title</title>\n" +
+                "</head>\n" +
+                "<body>\n" +
+                "<script src=\"https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js\" integrity=\"sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p\" crossorigin=\"anonymous\"></script>\n" +
+                "<table class=\"table\">\n" +
+                "  <thead>\n" +
+                "    <tr>\n" +
+                "      <th scope=\"col\">#</th>\n" +
+                "      <th scope=\"col\">First</th>\n" +
+                "      <th scope=\"col\">Last</th>\n" +
+                "      <th scope=\"col\">Handle</th>\n" +
+                "    </tr>\n" +
+                "  </thead>\n" +
+                "  <tbody>\n" +
+                "    <tr>\n" +
+                "      <th scope=\"row\">1</th>\n" +
+                "      <td>Mark</td>\n" +
+                "      <td>Otto</td>\n" +
+                "      <td>@mdo</td>\n" +
+                "    </tr>\n" +
+                "    <tr>\n" +
+                "      <th scope=\"row\">2</th>\n" +
+                "      <td>Jacob</td>\n" +
+                "      <td>Thornton</td>\n" +
+                "      <td>@fat</td>\n" +
+                "    </tr>\n" +
+                "    <tr>\n" +
+                "      <th scope=\"row\">3</th>\n" +
+                "      <td colspan=\"2\">Larry the Bird</td>\n" +
+                "      <td>@twitter</td>\n" +
+                "    </tr>\n" +
+                "  </tbody>\n" +
+                "</table>" +
+                "</body>\n" +
+                "</html>";
+    }
 }

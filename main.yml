@@ -21,7 +21,7 @@ jobs:
           java-version: '8'
       #Set up Maven cache
       - name: Cache Maven packages
-        #This action allows caching dependencies and build outputs to improve workflow execution time.
+        #This action allow caching dependencies and build outputs to improve workflow execution time.
         uses: actions/cache@v1
         with:
           path: ~/.m2

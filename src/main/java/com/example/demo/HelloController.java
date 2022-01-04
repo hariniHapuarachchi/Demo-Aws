@@ -37,7 +37,7 @@ public class HelloController {
                 "</html>";
     }
 
-    @GetMapping("/home")
+    @GetMapping(value = "/dashboard", produces = MediaType.TEXT_HTML_VALUE)
     public String loadHomePage() {
         return "<!DOCTYPE html>\n" +
                 "<html lang=\"en\">\n" +
